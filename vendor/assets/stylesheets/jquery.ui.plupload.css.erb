@@ -116,13 +116,15 @@
 	position: relative;
 	background-image: none;
 	background-color: #eee;
-	position: absolute;
-	left: 6px;
-	top: 6px;
 }
 
-.plupload_file_loading .plupload_file_thumb {
+.plupload_thumb_loading {
 	background: #eee url(<%= asset_path 'jquery.ui.plupload/loading.gif' %>) center no-repeat;
+}
+
+.plupload_thumb_loading .plupload_file_dummy,
+.plupload_thumb_embedded .plupload_file_dummy {
+	display: none;
 }
 
 .plupload_file_name {
@@ -328,6 +330,10 @@
 	display: block;
 }
 
+.plupload_files_queued .plupload_droptext {
+	display: none;
+}
+
 .plupload_buttons, .plupload_upload_status {float: left}
 
 .plupload_message {
@@ -347,7 +353,7 @@
 	font-weight: bold;
 }
 
-plupload_message i {
+.plupload_message i {
 	font-style: italic;
 }
 
