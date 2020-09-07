@@ -3513,7 +3513,7 @@ define("moxie/core/utils/Mime", [
 			}
 
 			// check if this thing looks like mime type
-			var m = mime.match(/^(\w+)\/(\*|\w+)$/);
+			var m = mime.match(/^(\w+)\/(\*|\w+|\w+\+\w+)$/);
 			if (m) {
 				if (m[2] === '*') {
 					// wildcard mime type detected
